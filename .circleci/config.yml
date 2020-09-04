@@ -24,7 +24,7 @@ jobs:
     steps:
       - checkout
 
-      # Download and cache dependencies
+      # Download and cache dependencies1
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "build.sbt" }}
@@ -32,7 +32,7 @@ jobs:
             - v1-dependencies-
 
       - run: cat /dev/null | sbt test:compile
-
+      # hoge
       - save_cache:
           paths:
             - ~/.m2
